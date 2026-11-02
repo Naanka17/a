@@ -1,0 +1,34 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "C/C++: g++ build server simulation",
+            "command": "g++",
+            "args": [
+                "-Wall",
+                "-Wextra",
+                "-g3",
+                "-std=c++17",
+                "${workspaceFolder}/main.cpp",
+                "${workspaceFolder}/Server.cpp",
+                "${workspaceFolder}/SystemMonitor.cpp",
+                "${workspaceFolder}/Task.cpp",
+                "-I${workspaceFolder}/include",
+                "-o",
+                "${workspaceFolder}/output/main.exe"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "Build the complete server simulation project"
+        }
+    ]
+}
